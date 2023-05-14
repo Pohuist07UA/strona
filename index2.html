@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  text-align: right;
+}
+
+
+
+a:hover {
+  background-color: transparent;
+  color: black;
+}
+.images-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image {
+  position: relative;
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.photo-section {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.photo:hover .photo-caption {
+  opacity: 1;
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.5); /* значение a должно быть от 0 до 1, где 0 - полностью прозрачно, а 1 - непрозрачно */
+}
+.gallery {
+  position: relative; /* добавляем относительное позиционирование */
+  z-index: 1; /* устанавливаем высокий уровень z-index */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: 0; /* устанавливаем низкий уровень z-index */
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax {
+  background-image: url('your-image.jpg');
+  background-color: #ccc;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+</style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="video_2023-05-10_22-10-29.mp4" type="video/mp4">
+</video>
+
+
+<div class="parallax">
+  <div class="gallery">
+    <div class="gallery">
+      <div class="photo parallax">
+        <img src="http://ogotour.com.ua/wp-content/uploads/sites/144/2021/04/more-1.jpg" alt="Photo 1">
+        <div class="photo-caption">
+          <h2>Morzu Balearskim</h2>
+          <p>Plaża marzeń na wyspie Formentera na Morzu Balearskim</p>
+        </div>
+      </div>
+      <div class="photo parallax">
+        <img src="http://ogotour.com.ua/wp-content/uploads/sites/144/2021/04/more-4.jpg" alt="Photo 2">
+        <div class="photo-caption">
+          <h2>Morza Karaibskiego</h2>
+          <p>Najlepszym sposobem na zobaczenie Morza Karaibskiego jest rejs luksusowym liniowcem!</p>
+        </div>
+      </div>
+      <div class="photo parallax">
+        <img src="http://ogotour.com.ua/wp-content/uploads/sites/144/2021/04/Formentera-Beach.jpg" alt="Photo 3">
+        <div class="photo-caption">
+          <h2>Morze Azowskie</h2>
+          <p>Ukraińskie morza są idealne na wakacje dla dzieci, np. Morze Azowskie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <h1>wakacje nad morzem</h1>
+  <p>Zapraszamy do odkrywania pięknych miejsc nadmorskich, które zachwycą każdego miłośnika słońca, morza i przyrody. Nasze wyjątkowe regiony obfitują w urokliwe plaże, ujścia rzek, klify i malownicze zatoki.
+
+    Jeśli lubisz aktywny wypoczynek, koniecznie odwiedź nasze nadmorskie miasta, gdzie czekają na Ciebie liczne atrakcje, takie jak wodne sporty, wycieczki rowerowe, a także kulturalne wydarzenia i festiwale.
+    
+    Jeśli zaś wolisz spokojniejszy wypoczynek, polecamy malownicze miejscowości i wsie, gdzie zrelaksujesz się na piaszczystych plażach, podziwiając przepiękne krajobrazy i delektując się lokalnymi specjałami.
+    
+    Odkryj piękno wybrzeża i zrelaksuj się w malowniczych zakątkach, które na długo zapadną Ci w pamięć. Zapraszamy!</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+  <a href="index3.html">Następna opcja </a>
+</div>
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+</body>
+</html>

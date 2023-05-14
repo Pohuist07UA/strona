@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  text-align: right;
+}
+a:hover {
+  background-color: transparent;
+  color: black;
+}
+
+
+
+/* здесь нужно добавить стили для вашей галереи */
+
+</style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="video_2023-05-11_19-43-10.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+</script>
+
+<div class="fullscreen-section">
+  <h2>Działalność górska</h2>
+  <p>Jeśli szukasz wspaniałego sposobu na relaks i aktywny wypoczynek, to góry są idealnym miejscem dla Ciebie. Góry oferują wiele możliwości spędzenia czasu na świeżym powietrzu, wśród przepięknych krajobrazów i przyjaznej atmosfery. Bez względu na to, czy jesteś miłośnikiem wspinaczki, turystyki pieszej, jazdy na nartach czy po prostu chcesz odpocząć w malowniczym otoczeniu, góry mają wiele do zaoferowania. Zapraszamy do zapoznania się z naszymi propozycjami i cieszenia się niezapomnianym wakacyjnym wypoczynkiem w  górach!</p>
+</div>
+
+  
+<div class="fullscreen-section">
+    <h2>Opis:</h2>
+    <p>Urlop w górach to niezapomniane przeżycie, które pozostawia jasne wrażenia na całe życie. Górska sceneria, świeże powietrze i możliwość aktywności sprawiają, że jest to szczególny urlop, który przemawia do wielu osób.
+
+      W górach można uprawiać wszelkiego rodzaju sporty, od turystyki pieszej i kolarstwa górskiego po wspinaczkę górską i skałkową. Istnieje również wiele uzdrowisk i spa, gdzie można się zrelaksować i odprężyć po całym dniu spędzonym na świeżym powietrzu.
+      
+      Górskie wioski i ośrodki narciarskie oferują szeroki wachlarz rozrywek i zajęć dostosowanych do wszystkich gustów i budżetów. Wakacje w górach to także okazja do poznania lokalnej kultury i tradycji, posmakowania lokalnej kuchni i zakupu unikalnych pamiątek.
+      
+      Jeśli szukasz spokoju i chcesz podziwiać wspaniałe widoki na góry, to wakacje w górach są właśnie tym, czego potrzebujesz. Tutaj znajdziesz przytulne pensjonaty i hotele z dala od zgiełku miasta.
+      
+      Wakacje w górach to świetny sposób na naładowanie baterii, podziwianie przyrody i uzyskanie ładunku pozytywnych emocji. Jesteśmy pewni, że góry pozostawią na Tobie niezapomniane wrażenie i staną się jedną z najbardziej żywych i niezapomnianych podróży w Twoim życiu.</p>
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+    <a href="index4.html">Następna opcja </a>
+  </div>
+  
+  <style>
+    .fullscreen-section {
+      position: relative;
+      margin-top: 100vh; /* добавляем отступ сверху, равный высоте экрана */
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+  
+    .fullscreen-section h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  
+    .fullscreen-section p {
+      font-size: 1.5rem;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+  </style>
+  
+</body>
+</html>
